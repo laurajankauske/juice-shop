@@ -84,7 +84,7 @@
                   placeholder="{{'WRITE_REVIEW_PLACEHOLDER' | translate}}"
                   matTextareaAutosize matAutosizeMinRows="2" maxlength="160"
                   matAutosizeMaxRows="4" aria-label="Text field to review a product"
-                  ></textarea>
+                  data-cy="reviewTextarea"></textarea>
         <mat-hint align="end">{{textPut.value?.length || 0}}/160</mat-hint>
       </mat-form-field>
 
@@ -99,7 +99,7 @@
         <button type="submit" id="submitButton" [disabled]="!textPut.value.trim()" mat-raised-button color="primary"
                 (click)="addReview(textPut)" style="margin-bottom: 5px; margin-top: 5px; margin-left: 5px;"
                 aria-label="Send the review" class="buttons"
-                [style.display]="isLoggedIn() ? 'block' : 'none' ">
+                [style.display]="isLoggedIn() ? 'block' : 'none' " data-cy="submitReviewButton">
           <i class="material-icons">
             send
           </i>

@@ -18,7 +18,7 @@
                     aria-label="Click to search"></mat-search-bar>
 
     <button [matMenuTriggerFor]="userMenu" mat-button style="vertical-align: middle; height:48px;" class="buttons"
-            fxHide.lt-md fxShow aria-label="Show/hide account menu" id="navbarAccount">
+            fxHide.lt-md fxShow aria-label="Show/hide account menu" id="navbarAccount" data-cy="accountButton">
       <i class="material-icons">
         account_circle
       </i>
@@ -34,7 +34,7 @@
           {{"TITLE_LOGIN" | translate }}
         </span>
       </button>
-      <button (click)="goToProfilePage()" *ngIf="isLoggedIn()" mat-menu-item aria-label="Go to user profile">
+      <button (click)="goToProfilePage()" *ngIf="isLoggedIn()" mat-menu-item aria-label="Go to user profile" data-cy="userProfileButton">
         <mat-icon>
           account_circle
         </mat-icon>
@@ -77,7 +77,7 @@
     </mat-menu>
 
     <button *ngIf="isLoggedIn()" mat-button routerLink="/basket" style="height:48px;" class="buttons"
-            aria-label="Show the shopping cart">
+            aria-label="Show the shopping cart" data-cy="yourBasketButton">
       <mat-icon>
         shopping_cart
       </mat-icon>

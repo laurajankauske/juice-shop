@@ -63,8 +63,8 @@
            matInput>
         </mat-form-field>
      </div>
-     <button type="submit" id="submitButton" style="margin-top:5px;" mat-raised-button color="primary"
-     [disabled]="countryControl.invalid || nameControl.invalid || numberControl.invalid || pinControl.invalid || addressControl.invalid || cityControl.invalid" 
+     <button type="submit" id="submitButton" data-cy="addressSubmitButton" style="margin-top:5px;" mat-raised-button color="primary"
+     [disabled]="countryControl.invalid || nameControl.invalid || numberControl.invalid || pinControl.invalid || addressControl.invalid || cityControl.invalid"
      (click)="save()"><i class="fas fa-paper-plane fa-lg"></i> {{'BTN_SUBMIT' | translate}}
      </button>
      <button mat-raised-button class="btn-return" (click)="routeToPreviousUrl()">
